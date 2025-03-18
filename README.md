@@ -8,31 +8,27 @@ This Java-based application manages a social network-like structure where users 
 - **Remove User:** Remove a user from the system by their ID.
 - **Add Friendship:** Create a friendship between two users in the network.
 - **Remove Friendship:** Remove an existing friendship between two users.
-- **Print User:** Display the details of a specific user (ID, first name, last name).
+- **Print User:** Display the users.
 - **Print Friendship:** Print all friendships in the system, showing the connected users.
 - **Communities:** Identify and display all connected communities (groups of users that are interconnected).
 - **Most Social Communities:** Identify and display the largest communities (the ones with the most connected users).
-- **Console Menu:** A simple text-based menu for user interaction via the console.
+- **Console Menu:** Displays the menu and reads the user's input from the console.
 
 ## Technologies & Architecture
 - **Programming Language:** Java
 - **Database:** PostgreSQL
-- **Persistence:** JDBC (Java Database Connectivity)
+- **Persistence:** JDBC 
 - **Architecture:** Layered architecture with the following layers:
   - **Domain Layer:** Defines core entities such as `User` and `Friendship`.
-  - **Repository Layer:** Handles data persistence (e.g., `UserDBRepository`).
-  - **Service Layer:** Implements business logic (e.g., `SocialCommunities` for community-related operations).
+  - **Repository Layer:** Handles data persistence.
+  - **Service Layer:** Implements business logic.
   - **UI Layer:** Provides a simple console interface for user interactions.
-
-## Design Patterns
-- **Depth First Search (DFS):** Used for identifying and exploring communities.
-- **Adjacency List Representation:** Models user relationships (friendships) to find communities.
 
 ## Installation & Setup
 1. Install **PostgreSQL** and create a database.
 2. Create the `users` and `friendships` tables in the database.
 3. Update the database connection details in the code (e.g., `UserDBRepository.java` with your PostgreSQL credentials).
-4. Import the project into an IDE (e.g., IntelliJ IDEA or Eclipse).
+4. Import the project into an IDE (IntelliJ IDEA or Eclipse).
 5. Run the application using the main class.
 
 ## Usage
@@ -45,16 +41,3 @@ This Java-based application manages a social network-like structure where users 
 7. **View Communities:** Select option `7` from the menu to view all connected communities.
 8. **Most Social Communities:** Select option `8` from the menu to find and display the largest communities.
 9. **Exit:** Select option `0` to exit the program.
-
-## Example Menu (Console)
-```plaintext
-MENU
-1. Add user
-2. Remove user
-3. Add friendship
-4. Remove friendship
-5. Print user
-6. Print friendship
-7. Communities
-8. Most social communities
-0. Exit
